@@ -22,35 +22,7 @@ A **RESTful API** built with **Express.js** and **MongoDB** for managing a libra
 ## DEMO 📺
 [Deployment Link](https://basic-nodejs-server-9nqsu5y09-farwamuhibzadas-projects.vercel.app/)
 
-## Installation and Setup 🔌
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/Full-Featured-RESTful-API.git
-2. Install dependencies:
-
-```bash
-Copy code
-cd Full-Featured-RESTful-API
-npm install
-```
-
-Here’s the raw code for the README.md file:
-
-markdown
-Copy code
-# Books API
-
-A **RESTful API** built with **Express.js** and **MongoDB** for managing a library of books. The API supports **CRUD** operations, **pagination**, **sorting**, **filtering**, and **error handling**. It also includes security features and can be easily extended with authentication and authorization.
-
-## Features
-
-- **Create, Read, Update, Delete** books in the database.
-- **Advanced query options**: pagination, sorting, filtering.
-- **Error handling**: Custom error classes and centralized error handling.
-- **Security**: Basic security headers with `helmet` and CORS enabled.
-- **Logging**: Request logging using `morgan`.
-- **Database**: MongoDB integration via Mongoose.
 
 ## Table of Contents
 
