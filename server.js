@@ -30,12 +30,9 @@ app.use((err, req, res, next) => {
 });
 
 // Connect to MongoDB
-mongoose.connect(process.env.MONGO_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-})
+mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log('Database connected successfully'))
-  .catch((err) => console.error('Database connection error:', err));  // Replaced console.log with console.error for error logging
+  .catch((err) => console.error('Database connection error:', err));  // Error logging
 
 // Start the server
 const PORT = process.env.PORT || 5000;
