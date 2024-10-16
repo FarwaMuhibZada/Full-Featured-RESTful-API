@@ -1,0 +1,22 @@
+{
+  "name": "full-featured-restful-api",
+  "version": "1.0.0",
+  "description": "Build a RESTful API from scratch using Express.js. Implement all CRUD (Create, Read, Update, Delete) operations. Integrate error handling, middleware, and advanced API features (pagination, filtering).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "helmet": "^8.0.0",
+    "mongoose": "^8.7.1",
+    "morgan": "^1.10.0",
+    "nodemon": "^3.1.7"
+  }
+}
