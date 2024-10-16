@@ -7,10 +7,10 @@ exports.getAllBooks = async (req, res, next) => {
     // Filtering
     const queryObject = { ...req.query };
     const excludedFields = ['page', 'sort', 'limit', 'fields'];
-    excludedFields.forEach(el => delete queryObject[el]);
+    excludedFields.forEach((el) => delete queryObject[el]);
 
     let queryStr = JSON.stringify(queryObject);
-    queryStr = queryStr.replace(/\b(gte|gt|lte|lt)\b/g, match => `$${match}`);
+    queryStr = queryStr.replace(/\b(gte|gt|lte|lt)\b/g, (match) => `$${match}`);
 
     // Building query
     let query = Book.find(JSON.parse(queryStr));
@@ -53,6 +53,7 @@ exports.getBookById = async (req, res, next) => {
   } catch (err) {
     next(new AppError('Error fetching book', 500));
   }
+  return null; // Ensure a consistent return
 };
 
 // Create a new book
@@ -63,6 +64,7 @@ exports.createBook = async (req, res, next) => {
   } catch (err) {
     next(new AppError('Error creating book', 400));
   }
+  return null; // Ensure a consistent return
 };
 
 // Update a book by ID
@@ -77,6 +79,7 @@ exports.updateBook = async (req, res, next) => {
   } catch (err) {
     next(new AppError('Error updating book', 400));
   }
+  return null; // Ensure a consistent return
 };
 
 // Delete a book by ID
@@ -88,4 +91,5 @@ exports.deleteBook = async (req, res, next) => {
   } catch (err) {
     next(new AppError('Error deleting book', 500));
   }
+  return null; // Ensure a consistent return
 };
